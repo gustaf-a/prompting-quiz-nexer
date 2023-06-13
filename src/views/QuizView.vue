@@ -32,7 +32,7 @@ const progress = computed(
 const messageToUser = computed(() => {
 	let quizResponses = allQuizResponses[quizId-1];
 	
-	const scaledValue = calculateScaledValue(quizes[quizId].questions.length, numberOfCorrectAnswers.value)
+	const scaledValue = calculateScaledValue(quiz.questions.length, numberOfCorrectAnswers.value)
 	let messageToUser = quizResponses[scaledValue];
 
 	return messageToUser;
