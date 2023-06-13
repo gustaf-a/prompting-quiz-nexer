@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/nexerpromptquiz/',
+  base: '/prompting-quiz-nexer/',
   plugins: [vue()],
   resolve: {
     alias: {
