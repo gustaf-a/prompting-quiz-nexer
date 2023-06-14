@@ -162,7 +162,7 @@
 			{
 				"id": "567890",
 				"text": "What could you try when a language model doesn't respond as you want it to?",
-				"trivia": "It's true that some things are very hard or impossible for language models, but we need to experiment and improve our prompts to get good answers.",
+				"trivia": "It's true that some things are very hard or impossible for language models, and it's also true that they give different answers each time we ask, but the best way to get better answers is to change our prompts.",
 				"options": [
 					{
 						"text": "Try the prompt again. Models give different answers each time.",
@@ -173,7 +173,7 @@
 						"isCorrect": false
 					},
 					{
-						"text": "Experiment with different prompts and refine your input",
+						"text": "Experiment by changing your prompt.",
 						"isCorrect": true
 					}
 				]
@@ -192,7 +192,7 @@
 						"isCorrect": true
 					},
 					{
-						"text": "Ask the model for uncommon answers.",
+						"text": "Ask the model for uncommon answers in the same conversation after you've received the first answer.",
 						"isCorrect": true
 					}
 				]
