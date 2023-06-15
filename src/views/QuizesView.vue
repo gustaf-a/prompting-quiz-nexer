@@ -4,6 +4,8 @@ import q from "../data/quizes.json";
 import { ref, watch } from "vue";
 import Card from "../components/Card.vue";
 
+import TryMeBanner from "@/components/TryMeBanner.vue";
+
 import gsap from "gsap";
 
 const quizes = ref(q);
@@ -34,6 +36,7 @@ const enter = (elementCalledFrom) => {
 
 <template>
   <div>
+    <TryMeBanner />
     <div class="cards-container">
       <TransitionGroup
         name="card"
