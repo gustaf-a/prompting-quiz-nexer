@@ -245,14 +245,14 @@
 			{
 				"id": "234567",
 				"text": "Which of these prompts are most likely to give a good response?",
-				"trivia": "Prompts that are clear, specific, and provide adequate context are more likely to yield good responses.",
+				"trivia": "Prompts that are written naturally in clear and specific language, and provide adequate context are more likely to yield good responses.",
 				"options": [
 					{
-						"text": "Sentences with words missing that the model can complete.",
+						"text": "Specific words with details, but not as when we write to humans. Grammar isn't important, the model only focuses on keywords.",
 						"isCorrect": false
 					},
 					{
-						"text": "Clear, specific prompts with many details.",
+						"text": "Clear, specific natural language with many details.",
 						"isCorrect": true
 					},
 					{
@@ -283,7 +283,7 @@
 			{
 				"id": "678901",
 				"text": "How can we avoid hallucinations in language models?",
-				"trivia": "We can't guarantee that no hallucinations occur, but step-by-step instructions can help.",
+				"trivia": "We can't guarantee that no hallucinations occur, but step-by-step instructions can help. A model may hallucinate references.",
 				"options": [
 					{
 						"text": "Ask the model to provide references.",
@@ -320,9 +320,13 @@
 			},
 			{
 				"id": "110510",
-				"text": "Why do we want to use delimiters in our prompts?",
+				"text": "Why do we want to use delimiters (tags, special characters, or similar) in our prompts?",
 				"trivia": "Delimiter, such as ```, ####, or tags helps the model process different parts of the prompt and can help prevent prompt injection.",
 				"options": [
+					{
+						"text": "To clearly divide different parts of a prompt.",
+						"isCorrect": true
+					},
 					{
 						"text": "To add aesthetic value to prompts and make it easier to read for humans.",
 						"isCorrect": false
@@ -330,17 +334,13 @@
 					{
 						"text": "To provide clear start and end points for the intended response.",
 						"isCorrect": false
-					},
-					{
-						"text": "To clearly divide different parts of the prompt to the model.",
-						"isCorrect": true
 					}
 				]
 			},
 			{
 				"id": "1623110",
 				"text": "Can ChatGPT fact check itself?",
-				"trivia": "ChatGPT can sometimes discover hallucinations made by itself, but we can't rely on it to verify the accuracy of information.",
+				"trivia": "ChatGPT prompts can use techniques to lessen hallucinations made, but we can't rely ChatGPT to completely verify the accuracy of information.",
 				"options": [
 					{
 						"text": "Yes, it can verify the accuracy of information.",
@@ -359,7 +359,7 @@
 			{
 				"id": "126210",
 				"text": "What is meant by the 'knowledge cutoff' of a language model, and why is this important to consider when using models like GPT-4?",
-				"trivia": "The model may still try to provide information after it's cutoff date, but that information is not reliable.",
+				"trivia": "The model may still try to provide information after it's knowledge cutoff date, but that information is not reliable.",
 				"options": [
 					{
 						"text": "It refers to the amount of data the model can store.",
@@ -377,8 +377,8 @@
 			},
 			{
 				"id": "124410",
-				"text": "Why is can it be good to start a prompt with 'Act as a'?",
-				"trivia": "",
+				"text": "Why can it be good to start a prompt with 'Act as a'?",
+				"trivia": "An early discovery was that 'Act as a knowledgable expert' made the response produce better answers. Now persona prompting is a very common way to start a prompt.",
 				"options": [
 					{
 						"text": "The model is programmed to always look for a role to take.",
@@ -389,7 +389,7 @@
 						"isCorrect": true
 					},
 					{
-						"text": "It improves the model's understanding of the question.",
+						"text": "Writing that makes the AI use a language model that is training with more specific data.",
 						"isCorrect": false
 					}
 				]
@@ -403,7 +403,7 @@
 		"questions": [
 			{
 				"id": "1290056",
-				"text": "How does questions in prompts work in AI language models?",
+				"text": "How do questions in prompts work in AI language models?",
 				"trivia": "Language models predict the probability of each possible next chunk of characters, given the 'words' that have come before. Asking a question can often cause more similar questions to be predicted. Special reinforcement learning is used to enable the model to answer questions naturally.",
 				"options": [
 					{
@@ -411,11 +411,11 @@
 						"isCorrect": false
 					},
 					{
-						"text": "A short second phase of training with instruction focused data is done.",
+						"text": "A short second phase of training with instruction focused data is done to teach a model to answer questions.",
 						"isCorrect": true
 					},
 					{
-						"text": "Large language models predicts the next probable chunk of characters which gives natural answers to questions.",
+						"text": "Large language models predict the next probable chunk of characters which gives natural answers to questions.",
 						"isCorrect": false
 					}
 				]
@@ -430,35 +430,16 @@
 						"isCorrect": false
 					},
 					{
-						"text": "By limiting the input token limit available for users.",
+						"text": "By limiting the input tokens available for users.",
 						"isCorrect": true
 					},
 					{
-						"text": "By using delimiters and ensuring we clean user input.",
+						"text": "By using delimiters and clean user input.",
 						"isCorrect": true
 					},
                     {
 						"text": "By using language models to classify the input, through for example OpenAIs moderation API.",
 						"isCorrect": true
-					}
-				]
-			},
-			{
-				"id": "1235116",
-				"text": "What's an emergent capability in an AI model?",
-				"trivia": "Emergent capabilities are a hotly discussed topic and some believe it's caused by bad measuring while others see them as a by-product of massive neural network size.",
-				"options": [
-					{
-						"text": "An ability that an AI gradually masters through supervised training.",
-						"isCorrect": false
-					},
-					{
-						"text": "Behaviors and abilities that suddenly appear as a byproduct of learning.",
-						"isCorrect": true
-					},
-					{
-						"text": "An ability to emerge from a dormant state when activated",
-						"isCorrect": false
 					}
 				]
 			},
@@ -554,6 +535,25 @@
 				]
 			},
 			{
+				"id": "1235116",
+				"text": "What's an emergent capability in an AI model?",
+				"trivia": "Emergent capabilities are a hotly discussed topic and some believe it's caused by bad measuring while others see them as a by-product of massive neural network size.",
+				"options": [
+					{
+						"text": "An ability that an AI gradually masters through supervised training.",
+						"isCorrect": false
+					},
+					{
+						"text": "Behaviors and abilities that suddenly appear as a byproduct of learning.",
+						"isCorrect": true
+					},
+					{
+						"text": "The ability to save state, go dormant, and then recover with the relevant state when activated later.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
 				"id": "197456",
 				"text": "What are Chain of Thought and Tree of Thought?",
 				"trivia": "Chain of Thought involves generating a series of prompts and responses with the AI, while Tree of Thought involves branching prompts to explore different paths.",
@@ -575,18 +575,18 @@
 			{
 				"id": "191156",
 				"text": "What's the role of open source development within language model development?",
-				"trivia": "Open Source models based on the LLaMA model (such as newest Orca) rapidly pushes progress with cheaper and shorter training cycles.",
+				"trivia": "Open Source models based (such LLaMa based Vicuna & Orca) rapidly pushes progress with faster and cheaper training cycles.",
 				"options": [
 					{
 						"text": "The massive amounts of data and computational power required makes open source projects impossible.",
 						"isCorrect": false
 					},
 					{
-						"text": "Open source development using smaller models and high quality data sets shows great potential.",
+						"text": "Open source development shows great potential by using smaller models and high quality data sets which are trained fast and cheap.",
 						"isCorrect": true
 					},
 					{
-						"text": "Open source projects are slow and expensive which makes it very hard.",
+						"text": "Open source projects are slow and expensive which makes training and development very hard.",
 						"isCorrect": false
 					}
 				]
